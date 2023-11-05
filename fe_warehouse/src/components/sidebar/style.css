@@ -1,0 +1,129 @@
+:root {
+  --first-color: #13192c;
+  --second-color: #1565c0;
+  --white-color: #ededed;
+
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-model: 1000;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  background: var(--white-color);
+  transition: 0.5s;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* width: 280px; */
+  /* width: 54px; */
+  height: 100vh;
+  background: var(--first-color);
+  padding: 1.25rem 0.5rem 2rem;
+  transition: 0.5s;
+  z-index: var(--z-fixed);
+  color: var(--white-color);
+}
+
+.nav {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* overflow: hidden; */
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.nav_toggle_icon {
+  position: absolute;
+  /* right: 10px; */
+  top: -5px;
+  right: -22px;
+  z-index: var(--z-model);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+  background: var(--second-color);
+  color: var(--white-color);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+.link_header {
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.sub_link {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 3px;
+  transition: 0.5s;
+  margin-left: 37px;
+}
+
+.sub_link:hover {
+  color: #2980b9;
+}
+
+.sub_link.active {
+  color: #2980b9;
+}
+
+.nav__link:hover {
+  background: #34495e;
+  color: var(--white-color);
+}
+
+.nav_icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.nav__link.active,
+.link_header.active {
+  background: #1565c0;
+  color: var(--white-color);
+}
+
+.show {
+  width: 280px;
+}
